@@ -1,31 +1,38 @@
-import React from "react";
-import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import NavigationBar from './NavigationBar';
+import './home.css';
 
-const Home = () => {
-  const navigate = useNavigate();
+const heroImage = "https://ik.imagekit.io/lmmaihcez/Group%20483559%20(1).png?updatedAt=1741373011673";
 
-  return (
-    <div className="flex items-center justify-center min-h-screen bg-white relative">
-      {/* Background Shadow Effect */}
-      <div className="absolute inset-0 bg-gradient-radial from-blue-900 via-blue-700 to-transparent opacity-50"></div>
+function HomePage() {
+    console.log("HomePage component rendered");
+    const navigate = useNavigate();
 
-      {/* Content */}
-      <div className="relative z-10 text-center">
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-800">
-          Welcome to ShadowNote
-        </h1>
-        <motion.button
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          className="mt-6 px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md transition duration-300"
-          onClick={() => navigate("/next-page")}
-        >
-          Get Started
-        </motion.button>
-      </div>
-    </div>
-  );
-};
+    return (
+        <div className="home-page">
+            <NavigationBar />
+            <div className="content">
+                <div className="text-content">
+                    <h1>Whisper your thoughts,</h1>
+                    <h1>and let the world</h1>
+                    <h1>listen anonymously</h1>
+                    <motion.button
+                        className="send-post-button"
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                        onClick={() => navigate('/postasecret')}
+                    >
+                        Send Post
+                    </motion.button>
+                </div>
+                <div className="image-content">
+                    <img src={heroImage} alt="Hero" />
+                </div>
+            </div>
+        </div>
+    );
+}
 
-export default Home;
+export default HomePage;

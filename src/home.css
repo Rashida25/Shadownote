@@ -1,0 +1,102 @@
+.home-page {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 120px;
+  max-width: 1300px;
+  margin: 0 auto;
+  flex: 1;
+}
+
+.text-content {
+  text-align: left;
+  max-width: 500px;
+}
+
+.text-content h1 {
+  font-size: 2.5em;
+  font-weight: 700;
+  color: #000;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.send-post-button {
+  background-color: #d58445;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.2em;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 25px;
+  transition: 0.3s;
+}
+
+.send-post-button:hover {
+  background-color: #b66b3b;
+}
+
+/* Set the illustration as background */
+.image-content {
+  position: relative;
+  margin-top: -16%;
+  left: 170px;
+  width: 680px;
+  height: 782px;
+  background: url('https://ik.imagekit.io/lmmaihcez/Group%20483559%20(1).png?updatedAt=1741373011673') no-repeat right bottom;
+  background-size: cover;
+}
+
+/* Background Shape */
+.home-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 55%;
+  height: 100%;
+  background-color: #f1e0c7;
+  border-bottom-left-radius: 50%;
+  border-top-left-radius: 50%;
+  z-index: -1;
+  transform: scaleX(1.2);
+}
+
+@media (max-width: 1024px) {
+  .content {
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 30px;
+  }
+
+  .text-content {
+    max-width: 100%;
+  }
+
+  .image-content {
+    width: 100%;
+    max-width: 500px;
+    height: 900px;
+    margin-top: 30px;
+    background-size: cover;
+    background-position: right bottom;
+  }
+
+  .home-page::before {
+    width: 100%;
+    border-radius: 0;
+    transform: none;
+  }
+}
