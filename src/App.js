@@ -4,6 +4,7 @@ import PostASecret from "./postasecret";
 import ConfessionPage from "./confession";
 import GenerateLinkPage from "./generatelink";
 import CheckMessagePage from "./message"; // Correct import
+import AboutUs from "./aboutus";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/confession" element={<ConfessionPage />} />
         <Route path="/generatelink" element={<GenerateLinkPage />} />
         <Route path="/checkmessage" element={<CheckMessagePage />} /> {/* FIXED */}
+        <Route path="/aboutus" element={<AboutUs />} />
       </Routes>
     </Router>
   );

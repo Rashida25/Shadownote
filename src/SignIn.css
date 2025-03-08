@@ -1,0 +1,157 @@
+/* Main container */
+.container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  /* Left section */
+  .left-section {
+    width: 50%;
+    background-color: #f7e0c7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .left-section img {
+    width: 80%;
+  }
+  
+  /* Right section */
+  .right-section {
+    width: 50%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+  }
+  
+  /* Heading */
+  h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    color: #e3925a;
+  }
+  
+  /* Input fields */
+  .input-container {
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .input-container label {
+    display: block;
+    color: #e3925a;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .input-container input {
+    width: 100%;
+    border: 2px solid #e3925a;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 1rem;
+    outline: none;
+  }
+  
+  .input-container input:focus {
+    border-color: #d17d4b;
+  }
+  
+  /* Remember me and forgot password */
+  .options {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+    font-size: 0.9rem;
+  }
+  
+  .options a {
+    color: #e3925a;
+    text-decoration: none;
+  }
+  
+  .options a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Sign-in button */
+  .sign-in-btn {
+    width: 100%;
+    background-color: #e3925a;
+    color: white;
+    font-size: 1.2rem;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .sign-in-btn:hover {
+    background-color: #d17d4b;
+  }
+  
+  /* Divider */
+  .divider {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 20px 0;
+  }
+  
+  .divider::before,
+  .divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: gray;
+    margin: 0 10px;
+  }
+  
+  /* Google Sign-in */
+  .google-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid gray;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .google-btn img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+  }
+  
+  .google-btn:hover {
+    background-color: #f0f0f0;
+  }
+  
+  /* Register link */
+  .register {
+    margin-top: 20px;
+    color: gray;
+  }
+  
+  .register a {
+    color: #e3925a;
+    text-decoration: none;
+  }
+  
+  .register a:hover {
+    text-decoration: underline;
+  }
+  

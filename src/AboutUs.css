@@ -1,0 +1,116 @@
+/* About Container */
+.about-container {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #ffffff;
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+  }
+  
+  /* About Heading */
+  .about-heading {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+  }
+  
+  .about-heading span {
+    color: #e3925a;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Description */
+  .about-description {
+    font-size: 1.2rem;
+    max-width: 800px;
+    text-align: center;
+    margin: 0 auto 30px;
+    line-height: 1.6;
+  }
+  
+  /* Features Section */
+  .features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+  }
+  
+  /* Feature Box */
+  .feature-box {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    width: 320px;
+    text-align: center;
+    box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .feature-box:hover {
+    transform: translateY(-7px);
+    box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* ✅ NEW CLASS FOR BACKEND FEATURES */
+  .backend-container {
+    width: 80%;
+    max-width: 900px;
+    margin: 60px auto 0; /* Centers without using align-items */
+  }
+  
+  /* Backend Title */
+  .backend-title {
+    font-size: 2rem;
+    color: #e3925a;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Backend Features List */
+  .backend-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .backend-list li {
+    font-size: 1.1rem;
+    background: white;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 10px;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .backend-list li:hover {
+    transform: scale(1.03);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .features {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .feature-box {
+      width: 100%;
+      max-width: 400px;
+    }
+  
+    .about-heading {
+      font-size: 2.5rem;
+    }
+  
+    .backend-container {
+      width: 90%;
+    }
+  }
+  

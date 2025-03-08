@@ -10,6 +10,12 @@ const quotes = [
     "The past whispers, will you listen?",
 ];
 
+const formatQuote = (text, wordsPerLine = 3) => {
+    return text.split(" ").reduce((acc, word, index) => {
+        return acc + (index % wordsPerLine === 0 ? "<br />" : " ") + word;
+    }, "");
+};
+
 function ConfessionPage() {
     const [currentQuote, setCurrentQuote] = useState(0);
     const navigate = useNavigate(); // React Router navigation hook
@@ -25,14 +31,20 @@ function ConfessionPage() {
     return (
         <div className="confession-container">
             <NavigationBar />
-            <div className="quote-container">{quotes[currentQuote]}</div>
-            <div className="button-container">
-                <button className="confession-btn generate-btn" onClick={() => navigate("/generatelink")}>
-                    Generate a Link
-                </button>
-                <button className="confession-btn check-btn" onClick={() => navigate("/checkmessage")}>
-                    Check Message
-                </button>
+            <div className="confession-background">
+                {/* Displaying formatted quote with line breaks */}
+                <div 
+                    className="quote-container" 
+                    dangerouslySetInnerHTML={{ __html: formatQuote(quotes[currentQuote]) }} 
+                />
+                <div className="button-container">
+                    <button className="confession-btn generate-btn" onClick={() => navigate("/generatelink")}>
+                        Send A Message
+                    </button>
+                    <button className="confession-btn check-btn" onClick={() => navigate("/checkmessage")}>
+                        Retrive Message
+                    </button>
+                </div>
             </div>
         </div>
     );

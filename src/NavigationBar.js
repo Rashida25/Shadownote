@@ -20,7 +20,7 @@ function NavigationBar() {
                 transition={{ duration: 0.3 }}
             />
             <ul className="nav-links">
-                {["Home", "Post a Secret", "Confession", "About Us", "Sign In"].map((item, index) => (
+                {["Home", "Post a Secret", "Confession", "About Us"].map((item, index) => (
                     <motion.li 
                         key={index}
                         whileHover={{ scale: 1.1 }}
